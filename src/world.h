@@ -8,6 +8,7 @@
 #define _WORLD_H_
 
 #include <iostream>
+#include <cstdlib>
 
 using namespace std;
 
@@ -26,6 +27,13 @@ class World
 
         // Accessors
         bool isDirty();
+        void show(ostream &out);
+        int location(int X, int Y);
+        int rowCount();
+        int colCount();
+
+        // Mutators
+        void clean(int X, int Y);
 
         // Operators
         friend ostream& operator<<(ostream& out, World world);

@@ -12,14 +12,15 @@ int main()
     World world(4, 4);
 
     // Can also initiate with coords
-    Vacuum ai;
+    Vacuum ai(world);
 
     // When the world is dirty, ai is clean()'ing
     while(world.isDirty())
     {
         ai.clean(world);
-        cout << world;
+        world.show(cout);
+        break; // temp
     }
-    
+
     return 0;
 }
